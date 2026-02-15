@@ -1,27 +1,15 @@
 export function renderBio() {
   return `
     <div class="page-container">
-      <div class="page-content">
+      <div class="bio-content">
         <p>
-          Write your biographical information here. This is where you can share your story, 
-          your artistic journey, influences, and what drives your creative practice.
+          Virginia Cannella is a fibers artist living in Brooklyn, New York. She received a BFA in Art Education from Massachusetts College of Art and Design.
+          Her practice as an educator is centered around socially informed pedagogy and culturally responsive public programming.
+          Her current creative process centers heavily on examining femininity, aiming to rehearse new ideas for survival through corroborating the digital and the physical as a means of collective healing expressed through weaving, knitting, sewing, and quilting.
         </p>
-        
         <p>
-          You can include multiple paragraphs to give visitors a comprehensive understanding 
-          of who you are as an artist and creative professional.
+          Engaged with providing access to artistic experiences, she is currently the education coordinator at Brooklyn Metal Works, a jewelry and metalsmithing educational lab and exhibition space.
         </p>
-        
-        <p>
-          Consider adding information about:
-        </p>
-        <ul style="margin-left: 2rem; margin-top: 1rem;">
-          <li>Your background and training</li>
-          <li>Artistic philosophy and approach</li>
-          <li>Major influences and inspirations</li>
-          <li>Current projects and areas of focus</li>
-          <li>Future directions and goals</li>
-        </ul>
       </div>
     </div>
   `
