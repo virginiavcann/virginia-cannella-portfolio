@@ -20,6 +20,30 @@ const routes = {
   '/contact': renderContact
 }
 
+// Modal functions - make them global so they work from inline onclick handlers
+window.openModal = function(imageSrc, caption) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  
+  if (modal && modalImg && modalCaption) {
+    modal.style.display = 'flex';
+    modalImg.src = imageSrc;
+    modalCaption.textContent = caption;
+    
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+window.closeModal = function() {
+  const modal = document.getElementById('imageModal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
 // Render persistent header
 function renderHeader() {
   const currentPath = window.location.hash.slice(1) || '/'
@@ -64,6 +88,18 @@ function router() {
       ${render()}
     </div>
   `
+  
+  // Setup event listeners after page renders
+  setupEventListeners()
+}
+
+function setupEventListeners() {
+  // Close modal on escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      window.closeModal();
+    }
+  });
 }
 
 // Initialize router

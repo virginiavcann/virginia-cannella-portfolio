@@ -1,49 +1,62 @@
-# FIXED - Updated Files
+# Fixed Image Paths - No Leading Slash & PNG Extension
 
-## Issues Fixed
+## Changes Made
 
-1. ✅ **Name component now links to home** - Clicking "Virginia Cannella" properly navigates to home page
-2. ✅ **Curation image now links to curation page** - Fixed navigation
-3. ✅ **Writing image now links to writing page** - Fixed navigation
+1. ✅ **Removed leading slash** - Changed `/images/` to `images/`
+2. ✅ **Changed extension to .png** - All images now use `.png` instead of `.jpg`
 
-## Technical Fix
+## Updated Image Filenames
 
-Added explicit `onclick` handlers to ensure navigation works correctly when the page re-renders.
+### Home Page
+- `images/hero.png` (was `/images/hero.jpg`)
+
+### Portfolio Page
+- `images/art-preview.png` (was `/images/art-preview.jpg`)
+- `images/curation-preview.png` (was `/images/curation-preview.jpg`)
+- `images/writing-preview.png` (was `/images/writing-preview.jpg`)
+
+### Art Page
+- `images/fibers-1.png` (was `/images/fibers-1.jpg`)
+- `images/fibers-2.png` (was `/images/fibers-2.jpg`)
+- `images/2d-1.png` (was `/images/2d-1.jpg`)
+- `images/2d-2.png` (was `/images/2d-2.jpg`)
+- `images/digital-1.png` (was `/images/digital-1.jpg`)
+- `images/digital-2.png` (was `/images/digital-2.jpg`)
 
 ## Files to Replace
 
-**Only these 2 files need to be replaced:**
-
-1. `src/main.js` - Fixed name link to home page
-2. `src/pages/portfolio.js` - Fixed curation and writing image links
-
-**These files are included but haven't changed (only needed if you don't have them yet):**
-
-3. `src/pages/curation.js` - Curation page content
-4. `src/pages/writing.js` - Writing page content
+**3 page files:**
+- `src/pages/home.js` - Updated hero image path
+- `src/pages/portfolio.js` - Updated preview image paths
+- `src/pages/art.js` - Updated all art image paths
 
 ## How to Install
 
-1. **Replace these 2 files** in your project:
-   - Copy `src/main.js` to your `portfolio-site/src/` folder
+1. **Replace the files** in your project:
+   - Copy `src/pages/home.js` to your `portfolio-site/src/pages/` folder
    - Copy `src/pages/portfolio.js` to your `portfolio-site/src/pages/` folder
+   - Copy `src/pages/art.js` to your `portfolio-site/src/pages/` folder
 
-2. **If you don't have the new pages yet**, also copy:
-   - `src/pages/curation.js`
-   - `src/pages/writing.js`
+2. **Make sure your images are .png files** in the `public/images/` folder:
+   - Convert any .jpg files to .png, OR
+   - Rename your existing files to have .png extension
 
 3. **Refresh your browser** with a hard refresh:
    - Mac: `Cmd + Shift + R`
    - Windows/Linux: `Ctrl + Shift + R`
 
-## Test the Navigation
+## Important Note
 
-After updating, test these interactions:
+All images should be in `public/images/` folder with `.png` extension:
+- `public/images/hero.png`
+- `public/images/art-preview.png`
+- `public/images/curation-preview.png`
+- `public/images/writing-preview.png`
+- `public/images/fibers-1.png`
+- `public/images/fibers-2.png`
+- `public/images/2d-1.png`
+- `public/images/2d-2.png`
+- `public/images/digital-1.png`
+- `public/images/digital-2.png`
 
-- ✅ Click "Virginia Cannella" at the top → should go to home page
-- ✅ Click Portfolio → see three images
-- ✅ Click Art image → should go to Art page
-- ✅ Click Curation image → should go to Curation page
-- ✅ Click Writing image → should go to Writing page
-
-All navigation should now work properly!
+The paths now work correctly without the leading slash!
