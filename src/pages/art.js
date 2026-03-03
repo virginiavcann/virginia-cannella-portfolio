@@ -29,7 +29,7 @@ export function renderArt() {
           <div class="gallery-item-title">You can look and I will not hide, 2022, hand-tufted yarn on cloth, 20x30"</div>
         </div>
         
-        <div class="gallery-item" onclick="openModal('images/fibers-4.png', 'What was the last thing you did that you weren\'t supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in')">
+        <div class="gallery-item" onclick="openModal('images/fibers-4.png', 'What was the last thing you did that you weren’t supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in')">
           <img 
             src="images/fibers-4.png" 
             alt="What was the last thing you did that you weren\'t supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in"
