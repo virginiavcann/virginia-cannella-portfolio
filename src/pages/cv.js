@@ -38,6 +38,8 @@ export function renderCV() {
         MassArt Art Education All School Show Boston, MA, MassArt Arnheim Gallery</p>
 
         <h2><strong>PUBLISHED WRITING</strong></h2>
+        <p>Exhibition Learning Guide: <em>The True America: Photographs by Ernest Cole</em>, Aperture, March 2026</p>
+
         <p>Aperture On Sight, Aperture, October 2025</p>
         <p>"A Re-evaluation of Our Impressions: Shah Garg Foundation's <i>Making Their Mark</i>," College Art Association, June 2024<br>
 
