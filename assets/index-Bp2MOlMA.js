@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const i of document.querySelectorAll('link[rel="modulepreload"]'))s(i);new MutationObserver(i=>{for(const t of i)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&s(o)}).observe(document,{childList:!0,subtree:!0});function n(i){const t={};return i.integrity&&(t.integrity=i.integrity),i.referrerPolicy&&(t.referrerPolicy=i.referrerPolicy),i.crossOrigin==="use-credentials"?t.credentials="include":i.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(i){if(i.ep)return;i.ep=!0;const t=n(i);fetch(i.href,t)}})();function l(){return`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&s(o)}).observe(document,{childList:!0,subtree:!0});function n(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=n(e);fetch(e.href,t)}})();function r(){return`
     <div class="home-container">
       <div class="hero-image-container">
         <img 
@@ -70,7 +70,7 @@
           <div class="gallery-item-title">You can look and I will not hide, 2022, hand-tufted yarn on cloth, 20x30"</div>
         </div>
         
-        <div class="gallery-item" onclick="openModal('images/fibers-4.png', 'What was the last thing you did that you weren't supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in')">
+        <div class="gallery-item" onclick="openModal('images/fibers-4.png', 'What was the last thing you did that you weren’t supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in')">
           <img 
             src="images/fibers-4.png" 
             alt="What was the last thing you did that you weren't supposed to do?, 2023, hand-tufted yarn on cloth, 24x36in"
@@ -236,14 +236,22 @@
   `}function h(){return`
     <div class="page-container">
       <div class="writing-container">
-        
+
+
         <!-- Article 1 -->
+        <div class="writing-item">
+          <h2 class="writing-title"><a href="https://aperture.org/wp-content/uploads/2026/03/Aperture_The-True-America_Learning-Guide.pdf" target="_blank" rel="noopener noreferrer">Exhibition Learning Guide: <em>The True America: Photographs by Ernest Cole</em></a></h2>
+          <p class="writing-subheading">March 2026</p>
+        </div>
+
+    
+        <!-- Article 2 -->
         <div class="writing-item">
           <h2 class="writing-title"><a href="https://aperture.org/curriculum/aperture-on-sight/" target="_blank" rel="noopener noreferrer">Aperture On Sight</a></h2>
           <p class="writing-subheading">October 2025</p>
         </div>
 
-        <!-- Article 2 -->
+        <!-- Article 3 -->
         <div class="writing-item">
           <h2 class="writing-title"><a href="https://artjournal.collegeart.org/?p=18934" target="_blank" rel="noopener noreferrer">A Re-evaluation of Impressions: Shah Garg Foundation's <em>Making Their Mark</em></a></h2>
           <p class="writing-subheading">June 2024</p>
@@ -290,6 +298,8 @@
         MassArt Art Education All School Show Boston, MA, MassArt Arnheim Gallery</p>
 
         <h2><strong>PUBLISHED WRITING</strong></h2>
+        <p>Exhibition Learning Guide: <em>The True America: Photographs by Ernest Cole</em>, Aperture, March 2026</p>
+
         <p>Aperture On Sight, Aperture, October 2025</p>
         <p>"A Re-evaluation of Our Impressions: Shah Garg Foundation's <i>Making Their Mark</i>," College Art Association, June 2024<br>
 
@@ -340,33 +350,33 @@
         </p>
       </div>
     </div>
-  `}const w={"/":l,"/portfolio":d,"/art":g,"/curation":c,"/writing":h,"/cv":m,"/bio":v,"/contact":f};window.openModal=function(e,a){const n=document.getElementById("imageModal"),s=document.getElementById("modalImage"),i=document.getElementById("modalCaption");n&&s&&i&&(n.style.display="flex",s.src=e,i.textContent=a,document.body.style.overflow="hidden")};window.closeModal=function(){const e=document.getElementById("imageModal");e&&(e.style.display="none",document.body.style.overflow="auto")};function p(){const e=window.location.hash.slice(1)||"/";return`
+  `}const p={"/":r,"/portfolio":d,"/art":g,"/curation":c,"/writing":h,"/cv":m,"/bio":v,"/contact":f};window.openModal=function(i,a){const n=document.getElementById("imageModal"),s=document.getElementById("modalImage"),e=document.getElementById("modalCaption");n&&s&&e&&(n.style.display="flex",s.src=i,e.textContent=a,document.body.style.overflow="hidden")};window.closeModal=function(){const i=document.getElementById("imageModal");i&&(i.style.display="none",document.body.style.overflow="auto")};function w(){const i=window.location.hash.slice(1)||"/";return`
     <header class="site-header">
       <h1 class="name"><a href="#/" onclick="window.location.hash='#/'; return false;">Virginia Cannella</a></h1>
       
       <nav class="navigation">
         <ul class="nav-links">
           <li class="nav-link">
-            <a href="#/portfolio" class="${e==="/portfolio"?"active":""}">portfolio</a>
+            <a href="#/portfolio" class="${i==="/portfolio"?"active":""}">portfolio</a>
           </li>
           
           <li class="nav-link">
-            <a href="#/cv" class="${e==="/cv"?"active":""}">cv</a>
+            <a href="#/cv" class="${i==="/cv"?"active":""}">cv</a>
           </li>
           
           <li class="nav-link">
-            <a href="#/bio" class="${e==="/bio"?"active":""}">bio</a>
+            <a href="#/bio" class="${i==="/bio"?"active":""}">bio</a>
           </li>
           
           <li class="nav-link">
-            <a href="#/contact" class="${e==="/contact"?"active":""}">contact</a>
+            <a href="#/contact" class="${i==="/contact"?"active":""}">contact</a>
           </li>
         </ul>
       </nav>
     </header>
-  `}function r(){const e=window.location.hash.slice(1)||"/",a=w[e]||l,n=document.getElementById("app");n.innerHTML=`
-    ${p()}
+  `}function l(){const i=window.location.hash.slice(1)||"/",a=p[i]||r,n=document.getElementById("app");n.innerHTML=`
+    ${w()}
     <div class="page-content-wrapper">
       ${a()}
     </div>
-  `,A()}function A(){document.addEventListener("keydown",function(e){e.key==="Escape"&&window.closeModal()})}window.addEventListener("hashchange",r);window.addEventListener("load",r);window.navigate=e=>{window.location.hash=e};
+  `,A()}function A(){document.addEventListener("keydown",function(i){i.key==="Escape"&&window.closeModal()})}window.addEventListener("hashchange",l);window.addEventListener("load",l);window.navigate=i=>{window.location.hash=i};
